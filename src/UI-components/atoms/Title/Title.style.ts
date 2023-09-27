@@ -17,7 +17,6 @@ export const boxStyle = {
     display: 'flex',
     gap: '10px',
     alignItems: 'center',
-    paddingLeft: '29px',
     width: '262px',
     height: '121px',
 }

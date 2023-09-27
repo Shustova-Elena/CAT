@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 
 import { subTitle, title } from './Title.const'
 
-import { subTitleStyle, titleStyle, boxStyle } from './Title.style'
+import { boxStyle, subTitleStyle, titleStyle } from './Title.style'
 
 export const Title = () => {
     return (

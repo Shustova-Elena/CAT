@@ -1,5 +1,11 @@
-import { Title } from '../../UI-components/atoms/Title/index'
+import { BottomComponent } from '../../Components/BottomComponent'
+import { TopComponent } from '../../Components/TopComponent'
 
 export const MainPage = () => {
-    return <Title />
+    return (
+        <>
+            <TopComponent />
+            <BottomComponent />
+        </>
+    )
 }

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { MainPage } from '../pages/MainPage/index'
+import { MainPage } from '../pages/MainPage'
 
 interface Route {
     component: FC
