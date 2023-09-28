@@ -3,6 +3,7 @@ export const boxStyle = {
     height: '45vh',
     display: 'flex',
     gap: '163px',
+    position: 'relative',
 }
 
 export const containerStyle = {

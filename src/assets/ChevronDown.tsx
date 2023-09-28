@@ -2,11 +2,11 @@ export const ChevronDown = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="26"
+            height="26"
             fill="currentColor"
             className="bi bi-chevron-down"
-            viewBox="0 0 16 16"
+            viewBox="4 0 16 16"
         >
             <path
                 fillRule="evenodd"

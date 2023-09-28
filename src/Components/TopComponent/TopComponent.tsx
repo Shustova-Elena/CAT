@@ -2,7 +2,7 @@ import { Box, Container } from '@mui/material'
 
 import { Image } from '../../UI-components/atoms/Image'
 import { Title } from '../../UI-components/atoms/Title'
-import { DropDownList } from '../../UI-components/molecules/Select'
+import { SelectContainer } from '../../UI-components/organisms/SelectContainer'
 
 import { altText, KittenImage } from './TopComponent.const'
 
@@ -13,7 +13,7 @@ export const TopComponent = () => {
         <Box sx={boxStyle}>
             <Container sx={containerStyle}>
                 <Title />
-                <DropDownList />
+                <SelectContainer />
             </Container>
             <Image src={KittenImage} alt={altText} />
         </Box>
