@@ -1,6 +1,6 @@
 export const boxStyle = {
     width: '100%',
-    height: '55vh',
+    height: '65vh',
     backgroundColor: '#000',
     margin: 0,
     position: 'absolute',
@@ -15,4 +15,7 @@ export const textStyle = {
     fontSize: '96px',
     fontWeight: 400,
     textAlign: 'center',
+    '@media (max-width: 425px)': {
+        fontSize: '64px',
+    },
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { MenuItem, Select, SelectChangeEvent } from '@mui/material'
 
-import { ChevronDown } from '../../../assets/ChevronDown'
+import { ChevronDown } from '../../../assets/ChevronDown/ChevronDown'
 import { Currency } from '../../../redux/api/currencies'
 import { useAppDispatch } from '../../../redux/hooks/hooks'
 import { setCurrentCurrency } from '../../../redux/slices/CurrencySlice'
@@ -37,7 +37,16 @@ export const DropDownList = ({ data }: DropDownListType) => {
         >
             {data.map(({ id }: Currency) => {
                 return (
-                    <MenuItem value={id} key={id}>
+                    <MenuItem
+                        value={id}
+                        key={id}
+                        sx={{
+                            '&.Mui-selected': { backgroundColor: '#F0EFEF' },
+                            '&.Mui-selected:hover': {
+                                backgroundColor: '#F0EFEF',
+                            },
+                        }}
+                    >
                         {id}
                     </MenuItem>
                 )

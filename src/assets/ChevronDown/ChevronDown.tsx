@@ -1,12 +1,15 @@
+import { style } from './ChevronDown.style'
+
 export const ChevronDown = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="26"
-            height="26"
+            width="16"
+            height="16"
             fill="currentColor"
             className="bi bi-chevron-down"
-            viewBox="4 0 16 16"
+            viewBox="0 0 16 16"
+            style={style}
         >
             <path
                 fillRule="evenodd"

@@ -11,3 +11,10 @@ export const containerStyle = {
     flexDirection: 'column',
     paddingLeft: '29px',
 }
+
+export const imageStyle = {
+    display: 'inline',
+    '@media (max-width: 425px)': {
+        display: 'none',
+    },
+}

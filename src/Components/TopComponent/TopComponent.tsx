@@ -6,7 +6,7 @@ import { SelectContainer } from '../../UI-components/organisms/SelectContainer'
 
 import { altText, KittenImage } from './TopComponent.const'
 
-import { boxStyle, containerStyle } from './TopComponent.style'
+import { boxStyle, containerStyle, imageStyle } from './TopComponent.style'
 
 export const TopComponent = () => {
     return (
@@ -15,7 +15,7 @@ export const TopComponent = () => {
                 <Title />
                 <SelectContainer />
             </Container>
-            <Image src={KittenImage} alt={altText} />
+            <Image src={KittenImage} alt={altText} style={imageStyle} />
         </Box>
     )
 }
