@@ -1,5 +1,7 @@
+import { CSSProperties } from 'react'
+
 export interface ImgProps {
     src: string
     alt: string
-    style: object
+    style: CSSProperties
 }

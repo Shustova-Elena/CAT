@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Box, Typography } from '@mui/material'
 
 import { Currency, useGetCurrenciesQuery } from '../../redux/api/currencies'
@@ -10,20 +9,16 @@ export const BottomComponent = () => {
     const currentCurrencyId = useAppSelector<string>(
         (state) => state.currency.currentCurrency
     )
-    const { data: dataList } = useGetCurrenciesQuery()
-    const data = dataList ? dataList.data : []
-    const [value, setValue] = useState<string>(currentCurrencyId)
 
-    useEffect(() => {
-        const currency = data.find(
-            (item: Currency) => item.id === currentCurrencyId
-        ) as Currency
-        setValue(currency ? currency.name : '')
-    }, [currentCurrencyId])
+    const { data } = useGetCurrenciesQuery()
+
+    const currencyName = (data?.data || []).find(
+        (item: Currency) => item.id === currentCurrencyId
+    )?.name
 
     return (
         <Box sx={boxStyle}>
-            <Typography sx={textStyle}>{value}</Typography>
+            <Typography sx={textStyle}>{currencyName}</Typography>
         </Box>
     )
 }
