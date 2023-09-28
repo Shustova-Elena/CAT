@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { MenuItem, Select, SelectChangeEvent } from '@mui/material'
 
 import { ChevronDown } from '../../../assets/ChevronDown/ChevronDown'
@@ -6,11 +6,13 @@ import { Currency } from '../../../redux/api/currencies'
 import { useAppDispatch } from '../../../redux/hooks/hooks'
 import { setCurrentCurrency } from '../../../redux/slices/CurrencySlice'
 
+import { menuItemStyle, selectStyle } from './DropDownList.style'
+
 type DropDownListType = {
     data: Currency[]
 }
 
-export const DropDownList = ({ data }: DropDownListType) => {
+export const DropDownList = memo(({ data }: DropDownListType) => {
     const [value, setValue] = useState('')
     const dispatch = useAppDispatch()
 
@@ -33,24 +35,15 @@ export const DropDownList = ({ data }: DropDownListType) => {
             label=""
             onChange={(e) => handleChange(e)}
             IconComponent={ChevronDown}
-            sx={{ width: '181px', height: '43px', borderRadius: '10px' }}
+            sx={selectStyle}
         >
             {data.map(({ id }: Currency) => {
                 return (
-                    <MenuItem
-                        value={id}
-                        key={id}
-                        sx={{
-                            '&.Mui-selected': { backgroundColor: '#F0EFEF' },
-                            '&.Mui-selected:hover': {
-                                backgroundColor: '#F0EFEF',
-                            },
-                        }}
-                    >
+                    <MenuItem value={id} key={id} sx={menuItemStyle}>
                         {id}
                     </MenuItem>
                 )
             })}
         </Select>
     )
-}
+})
